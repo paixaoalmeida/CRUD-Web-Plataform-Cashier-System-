@@ -8,3 +8,6 @@ class Product():
         self.preco_venda = preco_venda
         self.quantidade_estoque = quantidade_estoque
     
+    def AddProduct(self):
+        self.name = input("Qual é o nome do produto?")
+        print("O produto tem o nome de: " + self.name)
