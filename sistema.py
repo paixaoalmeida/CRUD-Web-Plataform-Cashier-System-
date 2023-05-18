@@ -1,13 +1,19 @@
-#Projeto de um gerenciamento de estoque com integraçõesc
-class Product():
-    def __init__(self,nome, categoria, fornecedor, preco_compra,preco_venda,quantidade_estoque):
-        self.nome = nome
-        self.categoria = categoria
-        self.fornecedor = fornecedor
-        self.preco_compra = preco_compra
-        self.preco_venda = preco_venda
-        self.quantidade_estoque = quantidade_estoque
+# -*- coding: utf-8 -*-
+import sys
+
+class Produto():
+    def __init__(self, preco, tipo):
+        self.preco = preco
+        self.tipo = tipo
+
+    def MostrarPreco(self):
+        return 'O preço é ' + self.preco
     
-    def AddProduct(self):
-        self.name = input("Qual é o nome do produto?")
-        print("O produto tem o nome de: " + self.name)
+    
+    def MostrarTipo(self):
+        return 'O tipo é ' + self.tipo
+    
+produto = Produto(sys.argv[1], sys.argv[2])
+
+print(produto.MostrarPreco())
+print(produto.MostrarTipo())
