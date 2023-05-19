@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import sys
+import sys #Lib to get the arguments
+import psycopg2 #Lib to connect to de PostgreeSQL database
 
 class Produto():
     def __init__(self, preco, tipo):
