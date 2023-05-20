@@ -12,25 +12,27 @@ cursor = conn.cursor()
 #--------------------------------------------#------------------------------------#------------------
 
 class Produto():
-    def __init__(self,nome,preco,quantidade):
-        self.nome = nome
-        self.preco = preco
-        self.quantidade = quantidade
+    def __init__(self):
+        pass
+    
+    def AddProductInfo(self):
+        list = [] #LIsta vazia que vai pegar os valores
+        arg = {'nome do produto': str, 'preço do produto': float, 'a quantidade': int} 
+        #Dicionário com o nome das perguntas e valores como tipos de dados 
+    
+        for nome, tipo in arg.items(): #dois argumentos no loop, key e valor
+            quest = tipo(input(f'Digite {nome}'))
+            list.append(quest) #A cada rodada do loop, acrescenta o resultado a lista
+        
+produto = Produto() #Colocando a classe produto dentro de um objeto
 
 
 
-#Código em construção!!
-
-
+#Função Main - Parte principal
 def Main():
-    list = []
-    arg = ['nome do produto', 'preço do produto','a quantidade']
-
-    for name in arg:
-        quest = input(f"Digite {name} ")
-        list.append(quest)
-    print(list)
+    produto.AddProductInfo()
 
 
+#Rodando a função Main do programa
 if __name__ == '__main__':
     Main()
