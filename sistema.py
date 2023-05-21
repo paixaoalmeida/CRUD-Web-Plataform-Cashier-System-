@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys #Lib to get the arguments
 import psycopg2 #Lib to connect to de PostgreeSQL database
-
 #CONNECTING TO DATABASE
 conn = psycopg2.connect(database="Sistema_caixa",
                         host="localhost",
@@ -29,6 +28,7 @@ class Produto():
             INSERT INTO produtos (nome_produto,preco_produto,quantidade_produto)
             VALUES(%s,%s,%s);
             """, (prod_list[0], prod_list[1], prod_list[2]))
+            conn.commit() #Comitar as mudanças no banco
         except:
             print('Algo deu errado na Querrie!')
 produto = Produto() #Colocando a classe produto dentro de um objeto
