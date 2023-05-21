@@ -14,7 +14,7 @@ class Produto():
     def __init__(self):
         pass
     
-    def AddProductInfo(self):
+    def AddProductInfoAndQuerry(self):
         prod_list = [] #LIsta vazia que vai pegar os valores
         arg = {'nome do produto:': str, 'preço do produto:': float, 'a quantidade:': int} 
         #Dicionário com o nome das perguntas e valores como tipos de dados 
@@ -26,11 +26,12 @@ class Produto():
         try:
             cursor.execute(f"""
             INSERT INTO produtos (nome_produto,preco_produto,quantidade_produto)
-            VALUES(%s,%s,%s);
-            """, (prod_list[0], prod_list[1], prod_list[2]))
+            VALUES(%s,%s,%s); 
+            """, (prod_list[0], prod_list[1], prod_list[2])) #Usando a função %s para definir uma váriavel - função do C
             conn.commit() #Comitar as mudanças no banco
         except:
-            print('Algo deu errado na Querrie!')
+            print('Há algo de errado com os dados ou o banco!')
+
 produto = Produto() #Colocando a classe produto dentro de um objeto
 
 
