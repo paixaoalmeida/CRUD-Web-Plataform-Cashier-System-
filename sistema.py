@@ -32,15 +32,30 @@ class Produto():
         except:
             print('Há algo de errado com os dados ou o banco!')
 
+    def ShowAllProducts(self):
+        cursor.execute("""
+            SELECT * FROM produtos
+        """)
+        conn.commit()
+
 produto = Produto() #Colocando a classe produto dentro de um objeto
 
 
 
 #Função Main - Parte principal
 def Main():
-    produto.AddProductInfo()
-
-
+    while True:
+        sis_menu = int(input('''
+            Sistema de caixa.
+            
+            1 - Adicionar Produto/Informação
+            0 - Sair
+        '''))
+        match sis_menu:
+            case 1:
+                produto.AddProductInfoAndQuerry()
+            case 0:
+                exit(0)
 
 #Rodando a função Main do programa
 if __name__ == '__main__':
