@@ -1,25 +1,21 @@
-#Projeto de gerenciamento de estoque
+<h1>Sistema de Caixa</h1>
+<p>Esse é um sistema de caixa que eu estou usando para <strong> aprimorar minhas habilidades em programação </strong>
+<p> O sistema é constituído de algumas funções básicas de um caixa e é <strong>integrado com uma base de dados </strong>, nesse caso específico, estou utilizando o <em>PostgreeSQL</em>.
+<h2> Qual é a meta deste projeto?</h2>
+<p>O objetivo do projeto é realizar integrações com ferramentas externas (<strong>como o próprio banco de dados e até instituições de pagamentos</strong>).
+<p>Dessa maneira, eu vou poder elevar o meu nível em questão de organização de código e complexidade.
+<h2>O quê já foi feito?</h2>
+<ul>
+	<li>Integração com o PostgreeSQL</li>
+	<li>Organização do código (Importando bibliotecas próprias, funções etc)</li>
+</ul>
 
-O objetivo é usar classes, funções e integrações para elevar o nível
-de programação em que eu estou jogando.
+<h2>Metas a realizar:</h2>
+<ul>
+	<li>Integração com um meio de pagamento</li>
+	<li>Cadastro de clientes</li>
+	<li>Envio de e-mail/SMS para clientes</li>
+	<li>Retirada de produtos do estoque</li>
+</ul>
 
-O sistema deve ter as seguintes funcionalidades:
-
-    Cadastro de produtos: cadastro de informações como nome do produto, código de barras, categoria, fornecedor, preço de compra, preço de venda, quantidade em estoque,
-	 entre outras informações relevantes.
-
-    Controle de estoque: o sistema deve permitir o registro da entrada e saída de produtos, para manter o controle do estoque.
-
-    Vendas: o sistema deve permitir a realização de vendas, com registro do cliente, produtos vendidos e valores.
-
-    Relatórios: o sistema deve gerar relatórios de vendas, produtos em estoque, produtos mais vendidos, entre outros relatórios relevantes para o negócio.
-
-Além disso, o sistema pode incluir integrações com outros serviços, como por exemplo:
-
-    Integração com um sistema de pagamento online, como PagSeguro ou PayPal, para permitir que os clientes possam efetuar pagamentos diretamente pelo sistema.
-
-    Integração com um sistema de envio de e-mails, para enviar automaticamente um e-mail ao cliente com informações sobre a compra realizada.
-
-    Integração com redes sociais, para permitir a divulgação dos produtos da loja nas redes sociais e atrair mais clientes.
-
-Em relação ao banco de dados, o sistema deve ter um banco de dados para armazenar as informações dos produtos, clientes, vendas, entre outras informações relevantes.
+<p>Qualquer sugestão com o projeto (Questão de aparência, técnica etc) será muito bem vinda!</p>
