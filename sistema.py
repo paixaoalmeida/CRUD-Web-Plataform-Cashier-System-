@@ -1,5 +1,3 @@
-import sys #Lib to get the arguments
-import psycopg2 #Lib to connect to de PostgreeSQL database
 from Produto import Produto as produto
 
 #------------------------------------------CÓDIGO--------------------------------

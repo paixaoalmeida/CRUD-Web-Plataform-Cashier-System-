@@ -1,4 +1,4 @@
-import psycopg2
+import psycopg2 #Lib to connect to de PostgreeSQL database
 
 #CONNECTING TO DATABASE
 conn = psycopg2.connect(database="Sistema_caixa",
