@@ -51,11 +51,11 @@ def Main():
             1 - Adicionar Produto/Informação
             0 - Sair
         '''))
-        match sis_menu:
-            case 1:
-                produto.AddProductInfoAndQuerry()
-            case 0:
-                exit(0)
+        if sis_menu == 1:
+            produto.AddProductInfoAndQuerry()
+            break
+        elif sis_menu == 0:
+            exit(0)
 
 #Rodando a função Main do programa
 if __name__ == '__main__':
