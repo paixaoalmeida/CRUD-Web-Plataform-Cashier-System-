@@ -37,9 +37,11 @@ class Produto():
         """)
         all_itens = cursor.fetchall() #Como é uma tupla dentro de uma lista, eu preciso fornecer dois indexes
 
-        for item in all_itens:
+        for item in all_itens:  #Dando um loop em todos os valores das tuplas retornadas
             print(f'''
-                nome: {item[0]} #Dando um loop em todos os valores das tuplas retornadas
-                preço: {item[1]}
+                nome: {item[0]}
+                preço: R${item[1]}
                 quantidade: {item[2]}
             ''')
+
+    def RemoveProduct(): #Em produção
