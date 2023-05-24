@@ -31,8 +31,10 @@ class Produto():
         except:
             print('Há algo de errado com os dados ou o banco!')
 
-    def ShowAllProducts(self):
+    def ShowAllProducts():
         cursor.execute("""
             SELECT * FROM produtos
         """)
-        conn.commit()
+        all_itens = cursor.fetchall()
+        for itens in all_itens:
+            print(itens)

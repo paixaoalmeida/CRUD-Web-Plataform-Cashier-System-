@@ -9,10 +9,14 @@ def Main():
             Sistema de caixa.
             
             1 - Adicionar Produto/Informação
+            2 - Mostrar todos os produtos
             0 - Sair
         '''))
         if sis_menu == 1:
             produto.AddProductInfoAndQuerry()
+            break
+        elif sis_menu == 2:
+            produto.ShowAllProducts()
             break
         elif sis_menu == 0:
             exit(0)
