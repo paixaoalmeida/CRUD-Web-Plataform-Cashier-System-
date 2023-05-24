@@ -11,11 +11,11 @@
 </ul>
 
 <h2>Metas a realizar:</h2>
-<ul>
+<<ul>
 	<li>Integração com um meio de pagamento</li>
 	<li>Cadastro de clientes</li>
 	<li>Envio de e-mail/SMS para clientes</li>
-	<li>Retirada de produtos do estoque</li>
+	<li><s>Retirada de produtos do estoque</s></li>
 </ul>
 
 <p>Qualquer sugestão com o projeto (Questão de aparência, técnica etc) será muito bem vinda!</p>
