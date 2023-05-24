@@ -10,6 +10,7 @@ def Main():
             
             1 - Adicionar Produto/Informação
             2 - Mostrar todos os produtos
+            3 - Remover produto do estoque
             0 - Sair
         '''))
         if sis_menu == 1:
@@ -17,6 +18,9 @@ def Main():
             break
         elif sis_menu == 2:
             produto.ShowAllProducts()
+            break
+        elif sis_menu == 3:
+            produto.RemoveProduct()
             break
         elif sis_menu == 0:
             exit(0)

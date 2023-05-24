@@ -28,20 +28,29 @@ class Produto():
             """, (
             prod_list[0], prod_list[1], prod_list[2]))  # Usando a função %s para definir uma váriavel - função do C
             conn.commit()  # Comitar as mudanças no banco
-        except:
-            print('Há algo de errado com os dados ou o banco!')
+
+        except psycopg2.Error as erro_db:
+            print('Algo deu errado! Siga o erro do banco abaixo: \n')
+            print(f'{erro_db}\n')
+            print(erro_db.diag)
+
 
     def ShowAllProducts():
-        cursor.execute("""
-            SELECT * FROM produtos
-        """)
-        all_itens = cursor.fetchall() #Como é uma tupla dentro de uma lista, eu preciso fornecer dois indexes
+        try:
+            cursor.execute("""
+                SELECT * FROM produtos
+            """)
+            all_itens = cursor.fetchall() #Como é uma tupla dentro de uma lista, eu preciso fornecer dois indexes
 
-        for item in all_itens:  #Dando um loop em todos os valores das tuplas retornadas
-            print(f'''
-                nome: {item[0]}
-                preço: R${item[1]}
-                quantidade: {item[2]}
-            ''')
+            for item in all_itens:  #Dando um loop em todos os valores das tuplas retornadas
+                print(f'''
+                    nome: {item[0]}
+                    preço: R${item[1]}
+                    quantidade: {item[2]}
+                ''')
+        except psycopg2.Error as error_db:
+            print('Algo deu errado! Siga o erro do banco abaixo: \n')
+            print(f'{error_db}\n')
+            print(error_db.diag)
 
     def RemoveProduct(): #Em produção
