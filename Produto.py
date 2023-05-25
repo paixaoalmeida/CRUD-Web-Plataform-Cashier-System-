@@ -10,7 +10,6 @@ conn = psycopg2.connect(database="postgres",
                         port="5432")
 cursor = conn.cursor()
 
-
 # --------------------------------------------#------------------------------------#-----------------
 class Produto():
     def __init__(self):

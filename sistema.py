@@ -1,4 +1,6 @@
 from Produto import Produto as produto
+from Cliente import Client as cliente
+
 
 #------------------------------------------CÓDIGO--------------------------------
 
