@@ -17,17 +17,20 @@ def Main():
             0 - Sair
         '''))
         
-        match (sis_menu):
-            case 1:
-                produto.AddProductInfoAndQuerry()
-            case 2:
-                produto.ShowAllProducts()
-            case 3:
-                produto.RemoveProduct()
-            case 4:
-                Client.cadastro_cliente()
-            case _:
-                ('Digite uma das opções válidas!')
+        if sis_menu == 1:
+            produto.AddProductInfoAndQuerry()
+            break
+        elif sis_menu == 2:
+            produto.ShowAllProducts()
+            break
+        elif sis_menu == 3:
+            produto.RemoveProduct()
+            break
+        elif sis_menu == 4:
+            Client.cadastro_cliente()
+            break
+        elif sis_menu == 0:
+            break
 
 
 #Rodando a função Main do programa
