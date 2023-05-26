@@ -11,5 +11,6 @@ class SystemFunctions:
             quest = tipo(input(f'Digite {nome} '))
             prod_list.append(quest)  # A cada rodada do loop, acrescenta o resultado a lista
         
-        return prod_list[0],prod_list[1]
+        return prod_list[0],prod_list[1] 
+        #Retornando o index da lista que pega o input dos usuários
     

@@ -16,8 +16,10 @@ class Client:
                     INSERT INTO clientes(nome_cliente,cpf_cliente)
                     VALUES(%s,%s);
                     ''',(
-                        funcimp.SystemFunctions.pegar_nomes()))
-                conn.commit() and conn.close
+                        funcimp.SystemFunctions.pegar_nomes())) 
+                #Passando a função pegar nomes no valor do INSERT
+                conn.commit() and conn.close 
+                #Atualizando e fechando a conexão com o banco
 
         except psycopg2.Error as erro:
             print(f'{erro}')
