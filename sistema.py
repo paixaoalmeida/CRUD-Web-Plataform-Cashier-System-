@@ -1,5 +1,5 @@
 from Produto import Produto as produto
-from Cliente import Client as cliente
+from Cliente import Client
 
 
 #------------------------------------------CÓDIGO--------------------------------
@@ -13,19 +13,22 @@ def Main():
             1 - Adicionar Produto/Informação
             2 - Mostrar todos os produtos
             3 - Remover produto do estoque
+            4 - Cadastrar um cliente
             0 - Sair
         '''))
-        if sis_menu == 1:
-            produto.AddProductInfoAndQuerry()
-            break
-        elif sis_menu == 2:
-            produto.ShowAllProducts()
-            break
-        elif sis_menu == 3:
-            produto.RemoveProduct()
-            break
-        elif sis_menu == 0:
-            exit(0)
+        
+        match (sis_menu):
+            case 1:
+                produto.AddProductInfoAndQuerry()
+            case 2:
+                produto.ShowAllProducts()
+            case 3:
+                produto.RemoveProduct()
+            case 4:
+                Client.cadastro_cliente()
+            case _:
+                ('Digite uma das opções válidas!')
+
 
 #Rodando a função Main do programa
 if __name__ == '__main__':

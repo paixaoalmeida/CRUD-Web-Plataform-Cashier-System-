@@ -11,3 +11,4 @@ class SystemFunctions:
         for nome, tipo in arg.items():  # dois argumentos no loop, key e valor
             quest = tipo(input(f'Digite {nome} '))
             prod_list.append(quest)  # A cada rodada do loop, acrescenta o resultado a lista
+        return prod_list[0],prod_list[1]
