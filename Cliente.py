@@ -10,7 +10,7 @@ class Client:
     def cadastro_cliente(cls):
 
         try:
-            with psycopg2.connect(database="Sistema_caixa",host="localhost",user="postgres",password="teste",port="5432") as conn:
+            with psycopg2.connect(database="postgrees",host="localhost",user="postgres",password="teste",port="5432") as conn:
                 cursor = conn.cursor()
                 cursor.execute('''
                     INSERT INTO clientes(nome_cliente,cpf_cliente)
