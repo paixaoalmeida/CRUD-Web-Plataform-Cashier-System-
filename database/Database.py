@@ -1,5 +1,4 @@
 import psycopg2
-import functions_system as funcimp
 
 class Database:
     def __init__(self, connection=None):

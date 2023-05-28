@@ -1,6 +1,6 @@
-from src.Produto import Produto as produto
-from src.Cliente import *
-from database.Database import * 
+from Produto import Produto as produto
+from Cliente import *
+from Database import * 
 
 client = Cliente()
 #------------------------------------------CÓDIGO--------------------------------
