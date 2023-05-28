@@ -1,9 +1,8 @@
 from Produto import Produto as produto
-from Cliente import Cliente
+from Cliente import *
 from Database import * 
 
-cliente = Cliente()
-
+client = Cliente()
 #------------------------------------------CÓDIGO--------------------------------
 
 #Função Main - Parte principal
@@ -29,7 +28,7 @@ def Main():
             produto.remove_product()
             break
         elif sis_menu == 4:
-            cliente.add_client()
+            client.add_client()
             break
         elif sis_menu == 0:
             break

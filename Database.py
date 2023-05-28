@@ -81,24 +81,3 @@ class Database:
             exit(1)
         
 
-#Creating a child class, this way i will have all the atributes from the database class and use it here
-class Cliente(Database): 
-    def __init__(self):
-        pass
-    
-    def add_client(self):
-        try:
-            self.cursor.execute('''
-                INSERT INTO clientes(nome_cliente,cpf_cliente)
-                VALUES(%s,%s);
-                ''',(
-                    funcimp.SystemFunctions.pegar_nomes())) 
-                    #Passando a função pegar nomes no valor do INSERT
-                
-            self.connection.commit()
-            self.connection.close()
-                #Atualizando e fechando a conexão com o banco
-
-        except psycopg2.Error as erro:
-            print(f'{erro}')
-            exit(1)

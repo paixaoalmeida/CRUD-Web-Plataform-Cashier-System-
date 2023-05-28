@@ -3,28 +3,27 @@ import psycopg2
 import functions_system as funcimp
 from Database import *
 
-class Client:
+#Creating a child class, this way i will have all the atributes from the database class and use it here
+class Cliente(Database): 
     def __init__(self):
-        pass
+        super().__init__() #Chamado os métodos da classe pai
+        self.connect_to_database()
 
-    def cadastro_cliente(cls):
-
+    def add_client(self):
         try:
-            with psycopg2.connect(database="postgrees",host="localhost",user="postgres",password="teste",port="5432") as conn:
-                cursor = conn.cursor()
-                cursor.execute('''
-                    INSERT INTO clientes(nome_cliente,cpf_cliente)
-                    VALUES(%s,%s);
-                    ''',(
-                        funcimp.SystemFunctions.pegar_nomes())) 
-                #Passando a função pegar nomes no valor do INSERT
-                conn.commit() and conn.close 
+            self.cursor.execute('''
+                INSERT INTO clientes(nome_cliente,cpf_cliente)
+                VALUES(%s,%s);
+                ''',(
+                    funcimp.SystemFunctions.pegar_nomes())) 
+                    #Passando a função pegar nomes no valor do INSERT
+            self.connection.commit()
+            self.connection.close()
                 #Atualizando e fechando a conexão com o banco
-
+    
         except psycopg2.Error as erro:
             print(f'{erro}')
             exit(1)
-
 
 
 

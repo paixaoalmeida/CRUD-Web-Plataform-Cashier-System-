@@ -4,6 +4,7 @@ from Database import *
 #Putting the class into an object
 database = Database()
 # --------------------------------------------#------------------------------------#-----------------
+
 class Produto():
     def __init__(self):
         pass
@@ -22,8 +23,3 @@ class Produto():
     def remove_product():
         database.connect_to_database()
         database.remove_products()
-
-
-    def add_client():
-        database.connect_to_database()
-        database.add_client()
