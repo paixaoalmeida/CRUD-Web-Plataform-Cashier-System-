@@ -1,7 +1,6 @@
 from Produto import Produto as produto
 from Cliente import *
-from Database import * 
-
+from database.Database import *
 client = Cliente()
 #------------------------------------------CÓDIGO--------------------------------
 
