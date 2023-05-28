@@ -15,7 +15,7 @@
 <h2>Goals to achieve:</h2>
 <ul>
 	<li>Integration with a payment method</li>
-	<li>Customer registration</li>
+	<li><s>Customer registration</s></li>
 	<li>Sending emails/SMS to customers</li>
 	<li><s>Product stock withdrawal</s></li>
 </ul>
