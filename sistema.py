@@ -1,6 +1,8 @@
 from Produto import Produto as produto
-from Cliente import Client
+from Cliente import Cliente
+from Database import * 
 
+cliente = Cliente()
 
 #------------------------------------------CÓDIGO--------------------------------
 
@@ -18,16 +20,16 @@ def Main():
         '''))
         
         if sis_menu == 1:
-            produto.AddProductInfoAndQuerry()
+            produto.add_product()
             break
         elif sis_menu == 2:
-            produto.ShowAllProducts()
+            produto.show_products()
             break
         elif sis_menu == 3:
-            produto.RemoveProduct()
+            produto.remove_product()
             break
         elif sis_menu == 4:
-            Client.cadastro_cliente()
+            cliente.add_client()
             break
         elif sis_menu == 0:
             break

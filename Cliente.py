@@ -1,12 +1,12 @@
 #EM PRODUÇÃO, LIB PSYCOPG2 SÓ FUNCIONA ABAIXO DO PYTHON 9
 import psycopg2
 import functions_system as funcimp
+from Database import *
 
 class Client:
     def __init__(self):
         pass
 
-    @classmethod
     def cadastro_cliente(cls):
 
         try:
