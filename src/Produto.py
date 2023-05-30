@@ -23,3 +23,6 @@ class Produto():
     def remove_product():
         database.connect_to_database()
         database.remove_products()
+
+
+    #def register_purchase():

@@ -20,7 +20,7 @@ class Database:
                 SELECT * FROM produtos
             ''')
             all_itens = self.cursor.fetchall()
-            # Como é uma tupla dentro de uma lista, eu preciso fornecer dois indexes
+            #Tupla dentro de uma lista
 
             # Dando um loop em todos os valores das tuplas retornadas
             for item in all_itens:
@@ -28,6 +28,7 @@ class Database:
                         nome: {item[0]}
                         preço: R${item[1]}
                         quantidade: {item[2]}
+                        id: {item[3]}
                     ''')
         except psycopg2.Error as error_db:
             print('Algo deu errado! Siga o erro do banco abaixo: \n')

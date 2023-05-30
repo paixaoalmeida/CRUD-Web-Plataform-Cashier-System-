@@ -14,6 +14,7 @@
 </ul>
 <h2>Goals to achieve:</h2>
 <ul>
+    <li>Client being able to buy a product</li>
 	<li>Integration with a payment method</li>
 	<li><s>Customer registration</s></li>
 	<li>Sending emails/SMS to customers</li>
