@@ -1,8 +1,10 @@
+from src.sistema import *
+
 class SystemFunctions:
     def __init__(self):
         pass
 
-    def pegar_nomes():
+    def pegar_nomes(self):
         prod_list = []  # LIsta vazia que vai pegar os valores
         arg = {'nome do cliente:': str, 'CPF do cliente:': str}
         # Dicionário com o nome das perguntas e valores como tipos de dados
@@ -13,4 +15,11 @@ class SystemFunctions:
         
         return prod_list[0],prod_list[1] 
         #Retornando o index da lista que pega o input dos usuários
-    
+
+
+    def ask_to_leave(self):
+        quest = str(input('Deseja sair? S/N')).upper().lower()
+        if quest == 'S':
+            exit(0)
+        elif quest == 'N':
+            pass
