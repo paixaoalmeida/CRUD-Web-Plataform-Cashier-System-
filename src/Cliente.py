@@ -8,7 +8,7 @@ class Cliente(Database):
         super().__init__() #Chamado os métodos da classe pai
         self.connect_to_database()
 
-    def add_client(self):
+    def add_client(self=None):
         try:
             self.cursor.execute('''
                 INSERT INTO clientes(nome_cliente,cpf_cliente)
