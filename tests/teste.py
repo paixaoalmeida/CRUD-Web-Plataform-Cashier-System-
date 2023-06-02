@@ -5,27 +5,32 @@
 
 
 
-connection = psycopg2.connect(database="Sistema_caixa",
-                                       host="localhost",
-                                       user="postgres",
-                                       password="teste",
-                                       port="5432")
-cursor = connection.cursor()
+#onnection = psycopg2.connect(database="Sistema_caixa",
+                                       #host="localhost",
+                                       #user="postgres",
+                                      # password="teste",
+                                      # port="5432")
+#cursor = connection.cursor()
 
 
-cursor.execute('''
-    SELECT * FROM produtos
-    ''')
-all_itens = cursor.fetchall()
+#cursor.execute('''
+ #   SELECT * FROM produtos
+  #  ''')
+#all_itens = cursor.fetchall()
 # Tupla dentro de uma lista
 
     # Dando um loop em todos os valores das tuplas retornadas
-print(all_itens)
+#rint(all_itens)
 
+def ask_to_leave(self=None):
+    while True:
+        quest = str(input('Deseja sair? S/N')).upper()
+        try:
+            if quest == 'S':
+                break
+            elif quest == 'N':
+                pass
+        except ValueError:
+            print('Digite S ou N!')
 
-def ask_to_leave(self):
-    quest = str(input('Deseja sair? S/N')).upper().lower()
-    if quest == 'S':
-        exit(0)
-    elif quest == 'N':
-        pass
+ask_to_leave()
