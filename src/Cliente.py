@@ -1,5 +1,4 @@
 #EM PRODUÇÃO, LIB PSYCOPG2 SÓ FUNCIONA ABAIXO DO PYTHON 9
-import psycopg2
 from res.functions_system import SystemFunctions as functions_system
 from database.Database import *
 

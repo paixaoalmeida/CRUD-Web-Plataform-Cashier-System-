@@ -1,5 +1,4 @@
-import psycopg2
-from database.Database import *
+from src.database.Database import Database
 
 #Putting the class into an object
 database = Database()

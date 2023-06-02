@@ -1,10 +1,6 @@
 from Produto import Produto as produto
 from Cliente import *
-from database.Database import *
-from res.functions_system import *
 
-sys_functions = SystemFunctions()
-client = Cliente()
 #------------------------------------------CÓDIGO--------------------------------
 
 #Função Main - Parte principal
@@ -23,16 +19,12 @@ def Main():
         #Function of the cashier and function to ask if user wants to leave the system
         if sis_menu == 1:
             produto.add_product()
-            sys_functions.ask_to_leave()
         elif sis_menu == 2:
             produto.show_products()
-            sys_functions.ask_to_leave()
         elif sis_menu == 3:
             produto.remove_product()
-            sys_functions.ask_to_leave()
         elif sis_menu == 4:
-            client.add_client()
-            sys_functions.ask_to_leave()
+            Cliente.add_client()
         elif sis_menu == 0:
             break
 
