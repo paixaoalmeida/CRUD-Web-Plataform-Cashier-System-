@@ -1,7 +1,7 @@
 #The purpose of this file is to make some tests in the code when i need to.
-import psycopg2
-from database.Database import *
-from res.functions_system import *
+#import psycopg2
+#from database.Database import Database
+#from res.functions_system import *
 
 
 
@@ -22,3 +22,10 @@ all_itens = cursor.fetchall()
     # Dando um loop em todos os valores das tuplas retornadas
 print(all_itens)
 
+
+def ask_to_leave(self):
+    quest = str(input('Deseja sair? S/N')).upper().lower()
+    if quest == 'S':
+        exit(0)
+    elif quest == 'N':
+        pass
