@@ -1,36 +1,42 @@
 #The purpose of this file is to make some tests in the code when i need to.
-#import psycopg2
-#from database.Database import Database
+import psycopg2
+
 #from res.functions_system import *
 
+class teste(Database):
+    def __init__(self):
+        super().__init__()
+        self.connect_to_database()
 
+    def register_purchase(self):
+        data_list = []  # LIsta vazia que vai pegar os valores
+        arg = {'ID do produto:': int, 'Quantidade comprada:': int,
+               'Valor da compra:': float,
+               'Nome do cliente:': str}
+        # Dicionário com o nome das perguntas e valores como tipos de dados
 
-#onnection = psycopg2.connect(database="Sistema_caixa",
-                                       #host="localhost",
-                                       #user="postgres",
-                                      # password="teste",
-                                      # port="5432")
-#cursor = connection.cursor()
+        for nome, tipo in arg.items():  # dois argumentos no loop, key e valor
+            quest = tipo(input(f'Digite {nome} '))
+            data_list.append(quest)  # A cada rodada do loop, acrescent
 
-
-#cursor.execute('''
- #   SELECT * FROM produtos
-  #  ''')
-#all_itens = cursor.fetchall()
-# Tupla dentro de uma lista
-
-    # Dando um loop em todos os valores das tuplas retornadas
-#rint(all_itens)
-
-def ask_to_leave(self=None):
-    while True:
-        quest = str(input('Deseja sair? S/N')).upper()
         try:
-            if quest == 'S':
-                break
-            elif quest == 'N':
-                pass
-        except ValueError:
-            print('Digite S ou N!')
+            self.cursor.execute('''
+                UPDATE produtos
+                set quantidade_produto = quantidade_produto - %s
+                where id_product = %s
+            ''', (data_list[1], data_list[0]))
+            self.connection.commit()
+            self.connection.close()
 
-ask_to_leave()
+        except psycopg2.Error as erro_db:
+            print(f'Erro {erro_db}')
+
+
+
+
+
+
+
+testee = teste()
+
+testee.register_purchase()
