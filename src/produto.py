@@ -42,8 +42,9 @@ class RegisterProduct(Database):
         super().__init__()
         self.connect_to_database()
 
+    #MUDAR PARA REGISTRAR QUANTIDADE
     @classmethod
-    def register_purchase(cls):
+    def register_quantity_purchase(cls):
         """
         In this methode we also use the attributes of the Database class to make and
         math operation into the database (take one item out of one product if something is bought)
@@ -60,9 +61,7 @@ class RegisterProduct(Database):
         instance = cls()
 
         data_list = []  # LIsta vazia que vai pegar os valores
-        arg = {'ID do produto:': int, 'Quantidade comprada:': int,
-               'Valor da compra:': float,
-               'Nome do cliente:': str}
+        arg = {'ID do produto:': int, 'Quantidade comprada:': int}
 
         for nome, tipo in arg.items():
             quest = tipo(input(f'Digite {nome} '))
@@ -77,5 +76,51 @@ class RegisterProduct(Database):
             instance.connection.commit()
             instance.connection.close()
 
+            return data_list[0]
+
         except psycopg2.Error as erro_db:
             print(f'Erro {erro_db}')
+
+    @classmethod
+    def register_data_of_purchase(cls):
+        """
+        Thin function is supposed to do a query to the database and
+        register some customer's purchase by:
+
+            -Add name of the client to the registro table
+            -Add exact hour of the purchase
+            -Value of the purchase ($$)
+            -Name of the product
+
+        It's a big query, it takes the ID of the product, analyse the produto
+        table and replace the nome_produto column of registro table with
+        the name of the product (By ID of the produto table)
+
+        We declare a variable called NomePro in the query, so we can pass it
+        to the VALUES camp and get the name of the product to be replaced
+        """
+        instance = cls()
+        class_instance = RegisterProduct()
+
+        client_info = []  # LIsta vazia que vai pegar os valores
+        arg = {'Nome do cliente:': str, 'Valor da compra': float}
+
+        for nome, tipo in arg.items():
+            quest = tipo(input(f'Digite {nome} '))
+            client_info.append(quest)
+
+        instance.cursor.execute("""
+            DO $$
+                DECLARE NomePro varchar(15);
+                BEGIN
+	                SELECT nome_produto INTO NomePro FROM produtos
+	                WHERE id_product = %s;
+	
+	            INSERT INTO registro(nome_produto,nome_cliente, valor_compra, data_compra)
+	            VALUES(NomePro,%s,%s,now());
+            END $$;
+
+        """, (class_instance.register_quantity_purchase(), client_info[0], client_info[1],))
+
+        instance.connection.commit()
+        instance.connection.close()
