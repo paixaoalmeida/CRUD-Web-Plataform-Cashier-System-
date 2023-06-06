@@ -70,7 +70,7 @@ def main():
             client.add_client()
             ask_to_leave()
         elif sis_menu == 5:
-            RegisterProduct.register_purchase()
+            RegisterProduct.register_data_of_purchase()
         elif sis_menu == 0:
             break
 
