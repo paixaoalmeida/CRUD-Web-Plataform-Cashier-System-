@@ -62,15 +62,15 @@ class Database:
 
         Commits the changes in the end and closes the section
 
-        Here we can use and F string and just take the user's input
-        and query
+        Here we use and DELETE statement with a WHERE using the id of the product
+        to delete some product from de database
         """
         try:
             delete_request = str(input('Qual produto você quer deletar? '))
             self.cursor.execute(f'''
                 DELETE
                 FROM produtos
-                WHERE nome_produto ILIKE '{delete_request}'
+                WHERE id_product = '{delete_request}'
             ''')
             self.connection.commit()
             self.connection.close()
