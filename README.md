@@ -32,6 +32,6 @@
     </ul>
 
 <h3>Check the documentation of this project 
-<a href="./docs/LIBRARIES.MD">Here</a></h3>
+<a href="./docs/LIBRARIES.md">Here</a></h3>
 
 <p>Any suggestions regarding the project (appearance, technique, etc.) will be greatly appreciated!

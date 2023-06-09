@@ -30,7 +30,7 @@
         </ul>
 
 <h3>Dê uma olhada na documentação do projeto
-<a href="./docs/LIBRARIES.MD">Aqui</a></h3>
+<a href="./docs/LIBRARIES.md">Aqui</a></h3>
 
 <p>Qualquer sugestão com o projeto (Questão de aparência, técnica etc) será muito bem vinda!</p>
 
