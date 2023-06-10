@@ -1,11 +1,16 @@
 
 <p><strong><a href="./docs/README_PORTUGUESE.md">Portuguese BR | README</a></strong></p>
 
+<video width="300" height="400" autoplay="autoplay" autoplay controls>
+    <source src="./shortmvideo-2023-06-10_10.23.01.webm" type="video/webm">
+</video>
+
 <h1>Cashier System</h1>
-<p>This is a cashier system that I am using to <b>improve my programming skills</b>
-</p>
-<p>The system consists of some basic cashier functions and is <b>integrated with a database</b>; 
-<i>in this specific case, I am using</i> <strong>PostgreSQL</strong>.</p>
+    <p>This is a cashier system that I am using to <b>improve my programming skills.</b>
+    </p>
+    <p>The system consists of some basic cashier functions and is <b>integrated 
+    with a database</b>. 
+    <i>in this specific case, I am using</i> <strong>PostgreSQL</strong>.</p>
 
 <h2>What is the goal of this project?</h2>
     <p>The objective of the project is to perform integrations with external tools (<b>such as the database 
