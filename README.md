@@ -1,9 +1,8 @@
 
 <p><strong><a href="./docs/README_PORTUGUESE.md">Portuguese BR | README</a></strong></p>
 
-<video width="300" height="400" autoplay controls>
-    <source src="./shortmvideo-2023-06-10_10.23.01.webm" type="video/webm">
-</video>
+![GIF animado](./public/system_in_action.GIF)
+
 
 <h1>Cashier System</h1>
     <p>This is a cashier system that I am using to <b>improve my programming skills.</b>
