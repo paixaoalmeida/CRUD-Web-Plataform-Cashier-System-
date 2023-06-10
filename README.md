@@ -1,7 +1,7 @@
 
 <p><strong><a href="./docs/README_PORTUGUESE.md">Portuguese BR | README</a></strong></p>
 
-<video width="300" height="400" autoplay="autoplay" autoplay controls>
+<video width="300" height="400" autoplay controls>
     <source src="./shortmvideo-2023-06-10_10.23.01.webm" type="video/webm">
 </video>
 
