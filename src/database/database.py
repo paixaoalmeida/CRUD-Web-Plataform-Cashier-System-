@@ -12,6 +12,7 @@ class Database:
         -def remove_products
         def add_product_and_query
     """
+
     def __init__(self, connection=None):
         self.connection = connection
 
@@ -35,13 +36,16 @@ class Database:
         The reason we do this is because the result from the library is a tuple
         inside another tuple, so we use indexes to get the result out and format it
         to the user
+
+        Note: No need to commit here because there is no need, we are just
+        visualizing some data from the database
         """
         try:
             self.cursor.execute('''
                 SELECT * FROM produtos
             ''')
             all_itens = self.cursor.fetchall()
-            #Tupla dentro de uma lista
+            # Tupla dentro de uma lista
 
             # Dando um loop em todos os valores das tuplas retornadas
             for item in all_itens:
@@ -64,16 +68,20 @@ class Database:
 
         Here we use and DELETE statement with a WHERE using the id of the product
         to delete some product from de database
+
+        Note: That block was updated with a context manager 'with', this way we
+        make sure the connection with the db is closed with no bug, and just need
+        to add the connection.commit() method
         """
         try:
             delete_request = str(input('Qual produto você quer deletar? '))
-            self.cursor.execute(f'''
+            with self.cursor as query:
+                query.execute(f'''
                 DELETE
                 FROM produtos
                 WHERE id_product = '{delete_request}'
             ''')
             self.connection.commit()
-            self.connection.close()
 
         except psycopg2.Error as error_db:
             print('Algo deu errado! Siga o erro do banco abaixo: \n')
@@ -89,6 +97,10 @@ class Database:
 
         Then we just use the %s method (borrow from C) to put the indexes in the
         query
+
+        Note: That block was updated with a context manager 'with', this way we
+        make sure the connection with the db is closed with no bug, and just need
+        to add the connection.commit() method
         """
         prod_list = []
         arg = {'nome do produto:': str, 'preço do produto:': float, 'a quantidade:': int}
@@ -97,18 +109,18 @@ class Database:
             quest = tipo(input(f'Digite {nome} '))
             prod_list.append(quest)
 
+
         try:
-            self.cursor.execute(f"""
-                INSERT INTO produtos (nome_produto,preco_produto,quantidade_produto)
-                VALUES(%s,%s,%s); 
-                """, (
-                prod_list[0], prod_list[1], prod_list[2]))  # Usando a função %s para definir uma váriavel - função do C
-            self.connection.commit()  # Comitar as mudanças no banco
-            self.connection.close()
+            with self.cursor as query:
+                query.execute(f"""
+                    INSERT INTO produtos (nome_produto,preco_produto,quantidade_produto)
+                    VALUES(%s,%s,%s); 
+                    """, (
+                        prod_list[0], prod_list[1], prod_list[2]))
+                self.connection.commit()
 
         except psycopg2.Error as erro_db:
             print('Algo deu errado! Siga o erro do banco abaixo: \n')
             print(f'{erro_db}\n')
             print(erro_db.diag)
             exit(1)
-        
