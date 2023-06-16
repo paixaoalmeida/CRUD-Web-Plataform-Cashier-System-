@@ -1,0 +1,23 @@
+.Beggining{
+    font-family:'Courier New', Courier, monospace;
+    font-style: Bold;
+    text-align: center;
+    font-size: 32px;  
+}
+
+#title_options{
+    font-family:'Courier New', Courier, monospace;
+    font-style: Bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#form_1{
+    width:fit-content;
+    border: solid 2px;
+}
+
+body{
+    background-image: url("../../public/pexels-ron-lach-10533148.jpg");
+
+}
