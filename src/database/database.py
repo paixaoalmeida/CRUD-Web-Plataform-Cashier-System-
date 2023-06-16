@@ -109,7 +109,6 @@ class Database:
             quest = tipo(input(f'Digite {nome} '))
             prod_list.append(quest)
 
-
         try:
             with self.cursor as query:
                 query.execute(f"""
