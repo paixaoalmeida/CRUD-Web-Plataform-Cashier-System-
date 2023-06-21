@@ -1,0 +1,45 @@
+.Beggining{
+    font-family:'Courier New', Courier, monospace;
+    font-style: Bold;
+    text-align: center;
+    font-size: 32px;
+    margin: -23px;  
+}
+
+#title_options{
+    font-family:'Courier New', Courier, monospace;
+    font-style: Bold;
+    text-align: center;
+    text-decoration: underline;
+    margin: 60px;
+}
+
+.menu_option1, .menu_option2, .menu_option3{
+    font-family:'Courier New', Courier, monospace;
+    display:inline;
+    text-align:center;
+    margin:127px;
+    border:5px solid black;
+    padding:7px;
+    border-radius:10px;
+    text-shadow: 100px;
+}
+
+.menu_option1:hover{
+    padding:15px;
+    background-color: white;
+}
+
+.menu_option2:hover{
+    padding: 15px;
+    background-color: white;
+}
+
+.menu_option3:hover{
+    padding: 15px;
+}
+
+body{
+    background-image: url("../images/pexels-ron-lach-10533148.jpg");
+    margin: 0 auto;
+}
