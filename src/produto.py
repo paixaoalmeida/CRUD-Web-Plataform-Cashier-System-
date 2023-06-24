@@ -6,7 +6,7 @@ from src.database.database import *
 database = Database()
 
 
-class Produto():
+class Produto:
     """
     This class gets methods from the Database module
 
