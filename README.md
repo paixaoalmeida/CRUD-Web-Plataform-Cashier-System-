@@ -40,5 +40,4 @@
 
 <p>Any suggestions regarding the project (appearance, technique, etc.) will be greatly appreciated!
 
-<h3>OBS: CURRENTLY STUDYING HTML AND CSS TO MAKE A WEB PAGE OF THIS PROJECT!
-<p><b>It's going to happen very soon!</b></p>
+<h3><b>OBS: Integrated the Database with the Front End</b></h3>
