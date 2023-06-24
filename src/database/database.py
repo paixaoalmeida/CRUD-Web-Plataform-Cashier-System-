@@ -40,6 +40,7 @@ class Database:
         Note: No need to commit here because there is no need, we are just
         visualizing some data from the database
         """
+        global produtos_list
         try:
             self.cursor.execute('''
                 SELECT * FROM produtos
@@ -47,14 +48,15 @@ class Database:
             all_itens = self.cursor.fetchall()
             # Tupla dentro de uma lista
 
+            produtos_list = []
+
             # Dando um loop em todos os valores das tuplas retornadas
             for item in all_itens:
-                print(f'''
-                        nome: {item[0]}
-                        preço: R${item[1]}
-                        quantidade: {item[2]}
-                        id: {item[3]}
-                    ''')
+                produtos = [item[0], item[1], item[2], item[3]]
+                produtos_list.append(produtos)
+
+            return produtos_list
+
         except psycopg2.Error as error_db:
             print('Algo deu errado! Siga o erro do banco abaixo: \n')
             print(f'{error_db}\n')
@@ -123,3 +125,5 @@ class Database:
             print(f'{erro_db}\n')
             print(erro_db.diag)
             exit(1)
+
+
