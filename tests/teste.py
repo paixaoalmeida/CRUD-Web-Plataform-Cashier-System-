@@ -1,5 +1,7 @@
-from src.produto import RegisterProduct
+from src.produto import *
 
-instance_class = RegisterProduct()
+teste = Database()
 
-instance_class.register_data_of_purchase()
+teste.connect_to_database()
+
+print(type(teste.show_all_products()))
