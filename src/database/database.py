@@ -39,6 +39,10 @@ class Database:
 
         Note: No need to commit here because there is no need, we are just
         visualizing some data from the database
+
+        In the end of the loop of the results of the database, we append the results
+        in a list called produtos_list, this way we can return some data to the front-end
+        server Flask
         """
         global produtos_list
         try:
@@ -100,10 +104,11 @@ class Database:
         Then we just use the %s method (borrow from C) to put the indexes in the
         query
 
-        Note: That block was updated with a context manager 'with', this way we
+        Then we have the with statement as a context manager, this way we
         make sure the connection with the db is closed with no bug, and just need
         to add the connection.commit() method
         """
+
         prod_list = []
         arg = {'nome do produto:': str, 'preço do produto:': float, 'a quantidade:': int}
 
