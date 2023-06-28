@@ -12,11 +12,27 @@
 
 
     <div id="produtos_list">
-        <ul>
+        <table>
+            <tr>
+                <th class="a">Produto</th>
+                <th class="a">Preço</th>
+                <th class="a">Quantidade</th>
+                <th class="a">ID</th>
+            </tr>
             {% for item in products %}
-                <li>{{ item[0] }} {{ item[1] }} {{ item[2] }} {{ item[3] }}</li>
+                <tr>
+                    <td class="a">{{ item[0] }}</td> 
+                    <td class="a">{{ item[1] }}</td> 
+                    <td class="a">{{ item[2] }}</td> 
+                    <td class="a">{{ item[3] }}</td>
+                    <td class="a">{{ item[4] }}</td>
+                </tr>
             {% endfor %}
-        </ul>
+        </table>
+    </div>
+
+    <div id="back_menu">
+        <a href="/">Voltar para o Menu</a>
     </div>
 
 
