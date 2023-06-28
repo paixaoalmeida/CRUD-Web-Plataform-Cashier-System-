@@ -1,3 +1,7 @@
+body{
+    background-image: url("../images/texture_website.jpeg")
+}
+
 #title{
     text-align: center;
     font-family:'Courier New', Courier, monospace;
@@ -6,4 +10,31 @@
 
 #produtos_list{
     font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 5px;
+    padding: 30px;
+    padding-left: 55px;
+    margin: 50px auto 50px auto;
+}
+
+.a{
+    padding-right: 20px;
+    text-align:center
+}
+
+#back_menu{
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px;
+    padding: 15px;
+}
+
+#back_menu:hover{
+    padding: 20px;
+    color: grey
 }
