@@ -1,0 +1,30 @@
+body{
+    background-image: url("../../static/images/texture_website.jpeg")
+}
+
+#title{
+    font-family:'Courier New', Courier, monospace;
+    text-align:center;
+    font-size: 38px;
+
+}
+
+#cliente_info{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#cliente_info_button{
+    width:150px;
+    height: 40px;
+    display: block; 
+    margin: 20px auto 0 auto;
+    border: 2px solid black;
+    border-radius:10px;
+}
