@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cadastre cliente</title>
+    <link href="../static/files/style_registro.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
+
+    <div>
+        <h1 id="title">Preencha as informações abaixo</h1>
+    </div>
+
+
+
+
+    <div>
+        <form id="cliente_info" action="/registro" method="POST">
+            <p><b>Nome do cliente</b></p>
+            <input type="text" name="nome_cliente" placeholder="Digite nome"/>
+            <p><b>CPF do cliente</b></p>
+            <input type="text" name="cpf_cliente" placeholder="Digite CPF"/>
+            <input id="cliente_info_button" type="submit" value="Cadastrar cliente"/> 
+        </form>
+    </div>
+
+
+
+
 </body>
+
+
+
+
 </html>
