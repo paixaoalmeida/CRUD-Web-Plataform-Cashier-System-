@@ -1,4 +1,3 @@
-from res.functions_system import *
 from src.database.database import *
 
 
@@ -32,13 +31,13 @@ class Cliente(Database):
         super().__init__()
         self.connect_to_database()
 
-    def add_client(self):
+    def add_client(self, nome_cliente, cpf_cliente):
         try:
             self.cursor.execute('''
                 INSERT INTO clientes(nome_cliente,cpf_cliente)
                 VALUES(%s,%s);
                 ''', (
-                    SystemFunctions.pegar_nomes()))
+                    nome_cliente, cpf_cliente))
             self.connection.commit()
             self.connection.close()
     
