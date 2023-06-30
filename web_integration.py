@@ -2,12 +2,10 @@ from flask import Flask
 from flask import render_template
 from flask import url_for
 from flask import request
-from flask import redirec
+from flask import redirect
 from flask import abort
 from src.database.database import *
 from src.cliente import *
-
-pega_nome = SystemFunctions()
 
 db = Database()
 '''Initializing the Database module to use it
@@ -48,12 +46,12 @@ def show_produtos_get():
 
 @web.route("/registro", methods=['POST', 'GET'])
 def registro_cliente():
-    try:
-        if request.method == 'POST':
-            cliente = request.form['nome_cliente']
-            cpf = request.form['cpf_cliente']
-            client.add_client(cliente, cpf)
-    except:
-        abort(400)
+    if request.method == 'POST':
+        cliente = request.form['nome_cliente']
+        cpf = request.form['cpf_cliente']
+        client.add_client(cliente, cpf)
+        return render_template('sucesso_cadastro.html', cliente=cliente)
+    else:
+        return render_template('Registro_cliente.html')
 
-    return render_template('Registro_cliente.html')
+
