@@ -39,7 +39,6 @@ class Cliente(Database):
                 ''', (
                     nome_cliente, cpf_cliente))
             self.connection.commit()
-            self.connection.close()
     
         except psycopg2.Error as erro:
             print(f'{erro}')
