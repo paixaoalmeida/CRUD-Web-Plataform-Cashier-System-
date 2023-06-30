@@ -1,7 +1,7 @@
 
 <p><strong><a href="./docs/README_PORTUGUESE.md">Portuguese BR | README</a></strong></p>
 
-![GIF animado](./public/system_in_action.GIF)
+![GIF animado](./public/shortmvideo-2023-06-30_06.36.54.gif)
 
 
 <h1>Cashier System</h1>
