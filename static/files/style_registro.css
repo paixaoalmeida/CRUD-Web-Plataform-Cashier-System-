@@ -28,3 +28,18 @@ body{
     border: 2px solid black;
     border-radius:10px;
 }
+
+#go_back{
+    width: fit-content;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px;
+    padding: 15px;
+    margin:25px auto 10px auto;
+}
+
+#go_back:hover{
+    padding: 20px;
+    background-color:red
+}

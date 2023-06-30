@@ -18,9 +18,9 @@
     font-family:'Courier New', Courier, monospace;
     display:inline;
     text-align:center;
-    margin:127px;
+    margin:115px;
     border:5px solid black;
-    padding:7px;
+    padding:15px;
     border-radius:10px;
     text-shadow: 100px;
 }
@@ -28,15 +28,19 @@
 .menu_option1:hover{
     padding:15px;
     background-color: white;
+    padding:20px;
 }
 
 .menu_option2:hover{
     padding: 15px;
     background-color: white;
+    padding:20px;
 }
 
 .menu_option3:hover{
     padding: 15px;
+    background:white;
+    padding:20px;
 }
 
 body{
