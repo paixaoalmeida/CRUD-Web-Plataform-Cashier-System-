@@ -1,15 +1,28 @@
 
 <p><strong><a href="./docs/README_PORTUGUESE.md">Portuguese BR | README</a></strong></p>
 
-![GIF animado](./public/shortmvideo-2023-06-30_06.36.54.gif)
+<img style="margin-bottom:20px;" src="./public/Screenshot_2023-07-03_06-28-03.png">
+<img style="margin-bottom:20px" src="./public/Screenshot_2023-07-03_06-29-50.png">
+<img src="./public/Screenshot_2023-07-03_06-36-32.png">
 
+<div>
+    <h1>Cashier System</h1>
+        <p>This is a cashier system that I am using to <b>improve my programming skills.</b>
+        </p>
+        <p>It's a CRUD Web based system which interacts with a PostgreeSQL
+        database<br></p>
+</div>
 
-<h1>Cashier System</h1>
-    <p>This is a cashier system that I am using to <b>improve my programming skills.</b>
-    </p>
-    <p>The system consists of some basic cashier functions and is <b>integrated 
-    with a database</b>. 
-    <i>in this specific case, I am using</i> <strong>PostgreSQL</strong>.</p>
+<div>
+    <h2>Technologies i used:</h2>
+    <ul>
+        <li><b>Flask Framework (Python)</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Jinja2 (Template language</b></li>
+    </ul>
+</div>
+
 
 <h2>What is the goal of this project?</h2>
     <p>The objective of the project is to perform integrations with external tools (<b>such as the database 
@@ -23,6 +36,8 @@
 	    <li>Code organization (Importing own libraries, functions, etc.)</li>
         <li>Applied the best pratices into the repository and code itself</li>
         <li>Use of classes, functions and so on</li>
+        <li>A full stack application (both Front and back end integrated)</li>
+        <li>A CRUD application</li>
     </ol>
 
 <h2>Goals to achieve:</h2>
@@ -32,7 +47,7 @@
 	    <li><s>Customer registration</s></li>
 	    <li>Sending emails/SMS to customers</li>
 	    <li><s>Product stock withdrawal</s></li>
-        <li>Produce a web-based interface of the cashier system
+        <li><s>Produce a web-based interface of the cashier system</s></li>
     </ul>
 
 <h3>Check the documentation of this project 
