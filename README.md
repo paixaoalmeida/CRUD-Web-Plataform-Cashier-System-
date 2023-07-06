@@ -3,7 +3,9 @@
 
 <img style="margin-bottom:20px;" src="./public/Screenshot_2023-07-03_06-28-03.png">
 <img style="margin-bottom:20px" src="./public/Screenshot_2023-07-03_06-29-50.png">
-<img src="./public/Screenshot_2023-07-03_06-36-32.png">
+<img style="margin-bottom:20px" src="./public/Screenshot_2023-07-03_06-36-32.png">
+<img style="margin-bottom:20px" src="./public/Screenshot_2023-07-06_10-18-01.png">
+<img src="./public/Screenshot_2023-07-06_10-20-33.png">
 
 <div>
     <h1>Cashier System</h1>
@@ -17,6 +19,7 @@
     <h2>Technologies i used:</h2>
     <ul>
         <li><b>Flask Framework (Python)</li>
+        <li>PostgreeSQL</li>
         <li>HTML5</li>
         <li>CSS3</li>
         <li>Jinja2 (Template language</b></li>
