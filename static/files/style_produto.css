@@ -1,7 +1,7 @@
 body{
     margin: 0 auto;
     margin: 0 auto;
-    background-image: url("../images/products_page/pexels-karolina-grabowska-4022088.jpg");
+    background-image: url(../images/products_page/pexels-karolina-grabowska-4022088.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,22 +9,42 @@ body{
     height: 85%;
 }
 
-#title{
-    color:white;
-    text-align: center;
+#tittle{
     font-family:'Courier New', Courier, monospace;
+    text-align:center;
+    color:white
+}
+
+#tittle_image{
+    position:relative;
+    left:10px;
+    width:80px;
+    height: 70px;
+}
+
+#tittle_photo{
+    font-family:'Courier New', Courier, monospace;
+    position:relative;
+    left:95px;
+    bottom:67px;
+    color:white;
+}
+
+#title{
+    color:black;
+    text-align: center;
+    font-family:sans-serif;
     font-size: 38px;
 }
 
 #produtos_list{
-    color:white;
+    background-color: blueviolet;
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     border-radius: 25px;
-    box-shadow: 0px 0px 5px 5px;
     padding: 40px;
     padding-left: 55px;
-    margin: 50px auto 50px auto;
+    margin: 10px auto 50px auto;
 }
 
 .a{
@@ -36,11 +56,14 @@ body{
 #back_menu{
     width: fit-content;
     margin:115px auto 0 auto;
+    background-color:#8a2be2;
+    margin:0px auto 0px auto;
+    text-decoration: none;
+    border-radius:25px;
     padding:15px;
-    border-radius:10px;
-    box-shadow: 0px 1px 5px 2px;
-    text-shadow: 100px;
-    background-color:yellow;
+    position:relative;
+    left:550px;
+    bottom: 455px;
 }
 
 #back_menu:hover{
@@ -49,4 +72,5 @@ body{
 
 .back_menu_text{
     text-decoration:none;
+    color:white;
 }

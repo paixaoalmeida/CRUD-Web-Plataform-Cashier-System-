@@ -95,7 +95,7 @@ class Database:
             print(error_db.diag)
             exit(1)
 
-    def add_product_and_query(self):
+    def add_product_and_query(self,nome_produto, preco_produto, quantidade_produto):
         """
         Here, thats the same as the pegar_nomes() function from function_system
 
@@ -108,23 +108,14 @@ class Database:
         make sure the connection with the db is closed with no bug, and just need
         to add the connection.commit() method
         """
-
-        prod_list = []
-        arg = {'nome do produto:': str, 'preço do produto:': float, 'a quantidade:': int}
-
-        for nome, tipo in arg.items():
-            quest = tipo(input(f'Digite {nome} '))
-            prod_list.append(quest)
-
         try:
             with self.cursor as query:
                 query.execute(f"""
                     INSERT INTO produtos (nome_produto,preco_produto,quantidade_produto)
                     VALUES(%s,%s,%s); 
                     """, (
-                        prod_list[0], prod_list[1], prod_list[2]))
+                        nome_produto, preco_produto, quantidade_produto))
                 self.connection.commit()
-
         except psycopg2.Error as erro_db:
             print('Algo deu errado! Siga o erro do banco abaixo: \n')
             print(f'{erro_db}\n')

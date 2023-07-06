@@ -1,50 +1,84 @@
-.Beggining{
+#tittle_image{
+    position:relative;
+    bottom: 165px;
+    left:35px;
+    width:80px;
+    height: 70px;
+}
+
+#big_text{
+    font-family: sans-serif;
+    font-size:35px;
+    font-weight:bold;
+    position:relative;
+    left:35px;
+    bottom:140px;
+}
+
+#big_text2{
+    font-family: sans-serif;
+    font-weight:300;
+    font-size:25px;
+    position:relative;
+    left:35px;
+    bottom:165px;
+}
+
+#tittle{
     font-family:'Courier New', Courier, monospace;
-    color:white;
-    font-style: Bold;
-    text-align: center;
-    font-size: 32px;
-    margin-bottom:100px;
+    position:relative;
+    left:120px;
+    bottom: 65px;
 }
-
-
-.menu_option1, .menu_option2, .menu_option3{
-    font-family:'Courier New', Courier, monospace;
-    display:inline;
-    text-align:center;
-    margin:115px;
-    padding:15px;
-    border-radius:10px;
-    box-shadow: 0px 1px 5px 2px;
-    text-shadow: 100px;
-    background-color:yellow;
-}
-
-.menu_option1:hover{
-    padding:15px;
-    background-color: white;
-}
-
-.menu_option2:hover{
-    padding: 15px;
-    background-color: white;
-}
-
-.menu_option3:hover{
-    padding: 15px;
-    background:white;
-}
-
 
 .text_button{
-    text-decoration: none;
+    font-family: sans-serif;
     color:black;
+    position:relative;
+    left: 780px;
+    bottom:118px;
+}
+
+.aa{
+    color:white;
+    background-color:#8a2be2;
+    margin-right:20px;
+    text-decoration: none;
+    border-radius:25px;
+    padding:11px;
+}
+
+.aa:hover{
+    background-color: blueviolet;
+    background-color: hsla(100,100, 100,100);
+}
+
+.menuzin{
+    display: inline;
+    margin-right:35px;
+    position:relative;
+    bottom:100px;
+    left:240px;
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-decoration:underline;
+}
+
+
+#rodape{
+    background-color:blueviolet;
+    color:white;
+    font-family: sans-serif;
+    text-align:center;
+    padding-bottom: 1px;
+    padding-top: 10px;
 }
 
 
 body{
     margin: 0 auto;
-    background-image: url("../images/main_page/pexels-pavel-danilyuk-6612719\(4\).jpg");
+    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

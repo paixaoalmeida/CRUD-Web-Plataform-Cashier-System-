@@ -55,3 +55,16 @@ def registro_cliente():
         return render_template('Registro_cliente.html')
 
 
+@web.route("/registro_compra", methods=['GET', 'POST'])
+def registro_compra():
+    if request.method == 'POST':
+        try:
+            nome_produto = request.form['nome_produto']
+            preco_produto = request.form['preco_produto']
+            quantidade_produto = request.form['quantidade_produto']
+            data = db.add_product_and_query(nome_produto, preco_produto,quantidade_produto)
+            return render_template('sucesso_cadastro_compra.html', nome_produto=nome_produto)
+        except Exception as e:
+            print(f"{e}")
+    else:
+        return render_template('registro_compra.html')

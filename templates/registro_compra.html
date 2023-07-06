@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Registre uma compra</title>
+        <link href="../static/files/style_registro_compra.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div>
+            <img id="tittle_image" src="../static/images/carrinho.png">
+            <h1 id="tittle_photo">Deluxe</h1>
+        </div>
+
+        <div id="tittle">
+            <h1>Cadastre uma compra abaixo:</h1>
+        </div>
+        
+        <div>
+            <form id="form_compra" action="/registro_compra" method="POST">
+                <p><b>Produto</b></p>
+                <input class="input_style" type="text" name="nome_produto" placeholder="Nome do produto">
+                <p><b>Preço</b></p>
+                <input class="input_style" type="text" name="preco_produto" placeholder="Preço do produto">
+                <p><b>Quantidade</b></p>
+                <input class ="input_style" type="text" name="quantidade_produto" placeholder="Quantidade comprada">
+                <input id="submit_button" type="submit" name="submit_query" value="Cadastrar compra">
+            </form>
+
+
+        <div>
+            <a id="go_back" href="/">Voltar para o menu</a>
+        </div>
+        
+        </div>
+
+
+
+    </body>
+
+</html>
